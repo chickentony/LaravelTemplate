@@ -8,8 +8,24 @@
  
 ## Запуск проекта
 
-В корне проекта создать файл .env, скопировать в него все из файла .env.example
+В корне проекта создать файл .env, скопировать в него все из файла .env.example, после чего выполнить команду ```php artisan key:generate ```
 
 Запустить команду ```composer install```
 
 Для запуска проекта выполнить команду ```php artisan serve```
+
+## Запуск тестов
+
+Запуск тестов:
+
+```
+vendor\bin\codecep run tests/acceptance
+```
+
+Для запуска других тестов, необходимо указать название другой директивы (unit, api и т. д.)
+
+Запуск одного конкретного теста:
+
+```
+vendor\bin\codecep run tests/acceptance/ExampleCest.php:testSomething
+```
